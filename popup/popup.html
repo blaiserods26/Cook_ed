@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Cook_ed</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+<header>
+<h1>Cook_ed</h1>
+<button id="cleanNow">Clean Now</button>
+</header>
+
+
+<section class="controls">
+<input id="search" placeholder="Search sites…" />
+<div class="retention-controls">
+    <label>Keep cookies for</label>
+    <input id="retention" type="number" min="1" style="width:4em"> 
+    <span class="input-suffix">days</span>
+</div>
+<button id="openOptions">Open Settings</button>
+</section>
+
+
+<section>
+<table id="sites">
+<thead>
+<tr>
+<th>Site</th>
+<th>Cookies</th>
+<th>Last used</th>
+<th>Whitelist</th>
+<th></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+
+
+<footer>
+<small>All data stored locally • <a id="optionsLink" href="#">Settings</a></small>
+</footer>
+
+
+<script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cook_ed Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍪 Cook_ed Settings</h1>
+            <p>Manage your cookie preferences and automated cleanup settings</p>
+        </header">
+
+        <main>
+            <section class="settings-card">
+                <h2>📅 Cleanup Settings</h2>
+                <div class="setting-group">
+                    <label for="retentionDays">
+                        <span class="setting-label">Cookie Retention Period</span>
+                        <span class="setting-description">Automatically delete cookies from sites not visited for this many days</span>
+                    </label>
+                    <div class="input-group">
+                        <input type="number" id="retentionDays" min="1" max="365" step="1">
+                        <span class="input-suffix">days</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="autoCleanup">
+                        <span class="checkbox-custom"></span>
+                        <span class="setting-label">Enable Automatic Cleanup</span>
+                        <span class="setting-description">Automatically clean up stale cookies daily</span>
+                    </label>
+                </div>
+
+                <div class="setting-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showNotifications">
+                        <span class="checkbox-custom"></span>
+                        <span class="setting-label">Show Cleanup Notifications</span>
+                        <span class="setting-description">Get notified when cookies are cleaned up</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="settings-card">
+                <h2>🔒 Whitelist Management</h2>
+                <div class="setting-group">
+                    <label for="whitelistInput">
+                        <span class="setting-label">Add Site to Whitelist</span>
+                        <span class="setting-description">Sites in the whitelist will never have their cookies deleted</span>
+                    </label>
+                    <div class="input-group">
+                        <input type="text" id="whitelistInput" placeholder="example.com">
+                        <button id="addWhitelist" class="secondary-btn">Add</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div class="whitelist-container">
+                        <h3>Whitelisted Sites</h3>
+                        <div id="whitelistList" class="whitelist-list">
+                            <p class="empty-message">No sites whitelisted yet</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-card">
+                <h2>📊 Statistics & Information</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalCookies">0</div>
+                        <div class="stat-label">Total Cookies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalSites">0</div>
+                        <div class="stat-label">Sites Tracked</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="lastCleanup">Never</div>
+                        <div class="stat-label">Last Cleanup</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="settings-card">
+                <h2>🧹 Manual Actions</h2>
+                <div class="action-buttons">
+                    <button id="refreshData" class="action-btn">
+                        <span class="btn-icon">🔄</span>
+                        Refresh Cookie Data
+                    </button>
+                    <button id="cleanupNow" class="action-btn primary">
+                        <span class="btn-icon">🧹</span>
+                        Cleanup Now
+                    </button>
+                    <button id="exportData" class="action-btn">
+                        <span class="btn-icon">📤</span>
+                        Export Data
+                    </button>
+                </div>
+            </section>
+
+            <section class="settings-card">
+                <h2>ℹ️ About</h2>
+                <div class="about-content">
+                    <p><strong>Cook_ed</strong> is a browser extension that helps you manage cookies and track consent across websites.</p>
+                    <div class="features-list">
+                        <h3>Features:</h3>
+                        <ul>
+                            <li>Track cookie consent across websites</li>
+                            <li>View all stored cookies by domain</li>
+                            <li>Automated cleanup of stale cookies</li>
+                            <li>Whitelist trusted sites</li>
+                            <li>Delete unwanted cookies individually</li>
+                        </ul>
+                    </div>
+                    <div class="version-info">
+                        <p><strong>Version:</strong> 1.0.0</p>
+                        <p><strong>Data Storage:</strong> All data is stored locally on your device</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
